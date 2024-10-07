@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hausi</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .upload-form { margin: 20px 0; }
+        .file-list { margin: 20px 0; }
+        .file-item { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Hausi</h1>
+
+    <!-- Hausaufgaben-Hochladen-Formular -->
+    <form class="upload-form" method="POST" action="/upload" enctype="multipart/form-data">
+        <label for="fach">Fach auswählen:</label>
+        <select name="fach" id="fach">
+            <option value="Mathe">Mathe</option>
+            <option value="NT">NT</option>
+            <option value="GPG">GPG</option>
+            <!-- Weitere Fächer können hier hinzugefügt werden -->
+        </select>
+        <br><br>
+        <input type="file" name="datei">
+        <button type="submit">Hochladen</button>
+    </form>
+
+    <!-- Hochgeladen Hausi -->
+    <div class="file-list">
+        <h2>Hochgeladen Hausi</h2>
+        <div class="file-item">Mathe - Hausaufgabe1.pdf</div>
+        <div class="file-item">NT - Hausaufgabe2.pdf</div>
+        <!-- Dateien werden hier dynamisch hinzugefügt -->
+    </div>
+</body>
+</html>
